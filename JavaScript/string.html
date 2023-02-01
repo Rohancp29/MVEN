@@ -1,0 +1,26 @@
+<!-- HOMEWORK     rohanpatil
+create a javascript code to find the number of letters in a string -->
+
+<html>
+    <body>
+        <h2>js</h2>
+        <p id="test"></p>
+        <input type="text" id="input-string">
+  <button id="count-button">Count Letters</button>
+  <p id="output"></p>
+
+  <script>
+    function countLetters(str) {
+      return str.replace(/[^a-zA-Z]/g, "").length;
+    }
+
+    const input = document.querySelector("#input-string");
+    const button = document.querySelector("#count-button");
+    const output = document.querySelector("#output");
+
+    button.addEventListener("click", function() {
+      output.textContent = "Number of letters: " + countLetters(input.value);
+    });
+  </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!-- HOMEWORK     rohanpatil
+create a javascript inside html to find the square of a number -->
+<html>
+    <body>
+        <h2>js</h2>
+        <p id="test"></p>
+        <input type="text" id="input-number">
+  <button id="calculate-button">Calculate Square</button>
+  <p id="output"></p>
+
+  <script>
+    function square(num) {
+      return num * num;
+    }
+
+    const input = document.querySelector("#input-number");
+    const button = document.querySelector("#calculate-button");
+    const output = document.querySelector("#output");
+
+    button.addEventListener("click", function() {
+      output.textContent = "Square: " + square(Number(input.value));
+    });
+  </script>
+    </body>
+</html>
